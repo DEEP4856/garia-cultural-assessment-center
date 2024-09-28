@@ -69,7 +69,7 @@
     white-space: nowrap;
     position: absolute;
     will-change: transform;
-    animation: moveText 19s linear infinite;
+    animation: moveText 15s linear infinite;
     font-weight: bolder;
   }
 
