@@ -1,0 +1,113 @@
+
+
+.carousel-item {
+    height: 400px; 
+    position: relative;
+    overflow: hidden;
+}
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 3s ease-in-out; /* Smooth zoom-out transition */
+    transform: scale(1.1); /* Start with a slight zoom (10% larger) */
+}
+.carousel-item.active img {
+    transform: scale(1); /* Zoom out to normal size */
+}
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Black overlay with 20% opacity */
+    transition: background-color 1s ease-in-out;
+}
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.carousel-caption h5 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.carousel-caption p {
+    font-size: 1.25rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.notice-box {
+    background-color: #410c1c; /* Attractive brown color */
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    /* border-radius: 10px; */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 63px;
+  }
+
+  .notice-content {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    will-change: transform;
+    animation: moveText 19s linear infinite;
+    font-weight: bolder;
+  }
+
+  @keyframes moveText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+
+  /* typing text */
+  .typing-section {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 60px 20px;
+}
+
+.large-caption {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    display: inline-block;
+}
+
+.cursor {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 48px;
+    color: #333;
+    animation: blink 1s step-end infinite;
+}
+
+.description {
+    font-size: 18px;
+    color: #424242;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
