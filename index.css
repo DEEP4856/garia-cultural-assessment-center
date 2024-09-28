@@ -47,6 +47,10 @@
 
 
 
+
+
+
+
 .notice-box {
     background-color: #410c1c; /* Attractive brown color */
     color: rgb(255, 255, 255);
@@ -80,6 +84,11 @@
 
 
 
+
+
+
+
+
   /* typing text */
   .typing-section {
     background-color: #f8f9fa; /* Light background color */
@@ -89,7 +98,7 @@
 .large-caption {
     font-size: 48px;
     font-weight: bold;
-    color: #333;
+    color:#410c1c;
     display: inline-block;
 }
 
@@ -97,13 +106,13 @@
     display: inline-block;
     font-weight: bold;
     font-size: 48px;
-    color: #333;
+    color: #410c1c;
     animation: blink 1s step-end infinite;
 }
 
 .description {
     font-size: 18px;
-    color: #424242;
+    color: #383838;
 }
 
 /* Blinking cursor animation */
@@ -111,3 +120,112 @@
     from { opacity: 1; }
     to { opacity: 0; }
 }
+
+
+
+
+
+/* enroll box */
+/* Enroll Box Styles */
+.enroll-box {
+    background: linear-gradient(135deg, #221505 30%, #271603 100%); /* Gradient background */
+    padding: 30px;
+    /* border-radius: 15px; */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+    max-width: 600px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.enroll-box::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.enroll-box h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.enroll-box p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.enroll-now-button {
+    background-color: #ee840c;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.enroll-now-button:hover {
+    background-color: #3fff05;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .enroll-box {
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .enroll-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .enroll-box p {
+        font-size: 1rem;
+    }
+
+    .enroll-now-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .enroll-box {
+        padding: 15px;
+    }
+
+    .enroll-box h2 {
+        font-size: 1.25rem;
+    }
+
+    .enroll-box p {
+        font-size: 0.9rem;
+    }
+
+    .enroll-now-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+/* enroll box */
