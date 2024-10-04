@@ -2,7 +2,7 @@
 
 .carousel-item {
     height: 400px; 
-    position: relative;
+    position: relative; 
     overflow: hidden;
 }
 .carousel-item img {
@@ -69,7 +69,7 @@
     white-space: nowrap;
     position: absolute;
     will-change: transform;
-    animation: moveText 15s linear infinite;
+    animation: moveText 16s linear infinite;
     font-weight: bolder;
   }
 
@@ -98,134 +98,480 @@
 .large-caption {
     font-size: 48px;
     font-weight: bold;
-    color:#410c1c;
-    display: inline-block;
-}
-
-.cursor {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 48px;
     color: #410c1c;
-    animation: blink 1s step-end infinite;
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInScale 2s forwards; /* New fade-in with scale effect */
 }
 
 .description {
     font-size: 18px;
     color: #383838;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1.5s ease-out 1s forwards; /* Slide up effect */
 }
 
-/* Blinking cursor animation */
-@keyframes blink {
-    from { opacity: 1; }
-    to { opacity: 0; }
+/* Fade in and scale up effect */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
+/* Slide up effect for the description */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 
 
 /* enroll box */
-/* Enroll Box Styles */
-.enroll-box {
-    background: linear-gradient(135deg, #221505 30%, #271603 100%); /* Gradient background */
-    padding: 30px;
-    /* border-radius: 15px; */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    position: relative;
-    max-width: 600px;
-    margin: 50px auto;
+/* Main Enrollment Section */
+.enrollment-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background-color:#ffffff;
     overflow: hidden;
 }
 
-.enroll-box::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 200px;
-    height: 200px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    z-index: 0;
+/* Enroll Box */
+.enroll-box, .steps-box {
+    width: 45%;
+    padding: 40px;
+    background-color: #410c1c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    border-radius: 8px;
+    min-height: 300px;
+    opacity: 0;
+    transform: translateX(-100%); /* Start off-screen for animation */
+    animation: slideInLeft 1.5s forwards ease-in-out;
 }
 
-.enroll-box h2 {
-    font-size: 2rem;
-    color: #fff;
+.steps-box {
+    transform: translateX(100%); /* Slide in from the right */
+    animation: slideInRight 1.5s forwards ease-in-out;
+}
+
+/* Caption Styles */
+.enroll-box h2, .steps-box h2 {
+    font-size: 28px;
     margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
+    color: #ffffff;
+    text-align: center;
 }
 
-.enroll-box p {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 30px;
-    position: relative;
-    z-index: 1;
+.enroll-box p{
+    color: #ffffff;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
 }
 
-.enroll-now-button {
-    background-color: #ee840c;
-    color: #fff;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border: none;
+.steps-box li{
+    /* text-align: center; */
+    color: #ffffff;
+    font-weight: 400;
+}
+
+/* Button Styles */
+.enroll-button {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: relative;
-    z-index: 1;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+   justify-content: center;
 }
 
-.enroll-now-button:hover {
-    background-color: #3fff05;
+.enroll-button:hover {
+    background-color: #1ef530;
 }
 
-/* Responsive Styles */
+/* Steps List */
+.steps-box ol {
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .enroll-box {
-        padding: 20px;
-        margin: 30px auto;
+    .enrollment-section {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .enroll-box h2 {
-        font-size: 1.5rem;
+    .enroll-box, .steps-box {
+        width: 100%;
+        margin-bottom: 20px;
+        opacity: 0;
+        transform: translateX(-30%); /* Smaller translate for mobile */
+        animation: slideInLeftMobile 1.5s forwards ease-in-out;
     }
 
-    .enroll-box p {
-        font-size: 1rem;
-    }
-
-    .enroll-now-button {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .enroll-box {
-        padding: 15px;
-    }
-
-    .enroll-box h2 {
-        font-size: 1.25rem;
-    }
-
-    .enroll-box p {
-        font-size: 0.9rem;
-    }
-
-    .enroll-now-button {
-        padding: 8px 15px;
-        font-size: 0.9rem;
+    .steps-box {
+        transform: translateX(30%); /* Smaller slide in from right */
+        animation: slideInRightMobile 1.5s forwards ease-in-out;
     }
 }
 
+/* Smaller sliding animations for mobile screens */
+@keyframes slideInLeftMobile {
+    0% {
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRightMobile {
+    0% {
+        opacity: 0;
+        transform: translateX(30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 
+
+.modal-header {
+    background-color: #410c1c;
+    color: white;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+button.close {
+    color: #fff;
+}
 
 
 /* enroll box */
+
+
+
+/* enroll box -2 */
+.contact-section {
+    background-color:#410c1c; /* Brown background color */
+    padding: 60px 20px;
+}
+
+.left-section, .right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Caption Styling */
+.left-caption, .right-caption {
+    font-size: 28px;
+    color: #fff; /* White color for text */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* QR Code Styling */
+.qr-code {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Icon container */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+/* Icon links styling */
+.icon-link {
+    color: #fff; /* White color for icons */
+    font-size: 60px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for icons */
+.icon-link:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+    color: #f0c040; /* Change color to yellow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack columns vertically on small screens */
+    }
+
+    .left-caption, .right-caption {
+        font-size: 20px; /* Slightly smaller text on mobile */
+    }
+
+    .icon-link {
+        font-size: 30px; /* Smaller icons on mobile */
+    }
+}
+
+
+/* enroll box -2 */
+
+
+
+
+/* wp-icon */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25D366; /* WhatsApp green color */
+    padding: 15px;
+    border-radius: 46%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float i {
+    color: white; /* Icon color */
+    font-size: 30px; /* Icon size */
+}
+
+.whatsapp-float:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* wp-icon */
+
+
+
+
+
+/* enquiry-form */
+.contact-section {
+    padding: 40px 0;
+}
+
+.contact-info h2,
+.enquiry-form h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact-info p {
+    font-size: 27px;
+    line-height: 1.8;
+    color: #fff;
+}
+
+.form-group label {
+    color: #fff;
+}
+
+.enquiry-form .form-control {
+    margin-bottom: 15px;
+}
+
+.enquiry-form .btn {
+    background-color: #410c1c;
+    color: white;
+}
+
+.enquiry-form .btn:hover {
+    background-color: #14e649;
+}
+
+/* Center content on smaller screens */
+@media (max-width: 600px) {
+    .contact-info h2,
+    .enquiry-form h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .contact-info p {
+        text-align: center;
+    }
+
+    .form-group {
+        text-align: center;
+    }
+}
+
+
+/* enquiry-form */
+
+
+
+
+
+
+
+
+/* our well wishers message */
+/* Transparent Section with Caption */
+/* Transparent Section with Caption */
+/* Caption Styling */
+.caption-box h2 {
+    font-size: 2.5rem;
+    color:#410c1c;
+    margin-bottom: 40px;
+}
+
+/* Video Section Styling */
+.video-section {
+    padding: 60px 0;
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+}
+
+/* Video Box Styling */
+.video-box {
+    margin-bottom: 30px;
+}
+
+.video-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.video-card iframe {
+    width: 100%;
+    height: 350px; /* Adjust height for all videos */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Responsive Video Adjustments */
+@media (min-width: 1200px) {
+    .video-card iframe {
+        height: 400px; /* Larger video height for extra large screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .video-card iframe {
+        height: 320px; /* Medium screens (tablets) */
+    }
+}
+
+@media (max-width: 768px) {
+    .video-card iframe {
+        height: 280px; /* Small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .caption-box h2 {
+        font-size: 1.8rem; /* Smaller font size on mobile */
+    }
+
+    .video-card iframe {
+        height: 250px; /* Smaller video for very small screens */
+    }
+}
+
+/* our well wishers message */
+
+
+
+
+
+/* Container for the carousel */
+/* Container for the carousel */
+/* Full-width container for the carousel */
+/* Container holding the carousel, no padding or margin */
+/* Ensure no padding or margin for the carousel */
+.photo-carousel {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-wrapper {
+    display: flex;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    will-change: transform; /* Optimize performance */
+}
+
+.carousel-track img {
+    width: 20%; /* Set a percentage-based width for responsiveness */
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .carousel-track img {
+        width: 40%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-track img {
+        width: 60%;
+    }
+}

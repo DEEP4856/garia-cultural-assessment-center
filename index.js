@@ -1,38 +1,20 @@
-// typing
+document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector('.carousel-track');
+    let position = 0;
+    const speed = 2; // Adjust scrolling speed
 
-    const textArray = ["Welcome to Garia Cultural Assessment Centre"];
-    const typingSpeed = 100;
-    const delayBetweenTexts = 1500;
-    let textIndex = 0;
-    let charIndex = 0;
-    
-    function typeText() {
-        const typedTextElement = document.getElementById("typed-text");
-        
-        if (charIndex < textArray[textIndex].length) {
-            typedTextElement.innerHTML += textArray[textIndex].charAt(charIndex);
-            charIndex++;
-            setTimeout(typeText, typingSpeed);
-        } else {
-            setTimeout(deleteText, delayBetweenTexts);
+    function startInfiniteScroll() {
+        position -= speed; // Controls the scroll speed
+        if (Math.abs(position) >= track.scrollWidth / 2) {
+            position = 0; // Reset when half the images are scrolled through
         }
+        track.style.transform = `translateX(${position}px)`;
+        requestAnimationFrame(startInfiniteScroll); // Smooth animation loop
     }
 
-    function deleteText() {
-        const typedTextElement = document.getElementById("typed-text");
-        
-        if (charIndex > 0) {
-            typedTextElement.innerHTML = textArray[textIndex].substring(0, charIndex - 1);
-            charIndex--;
-            setTimeout(deleteText, typingSpeed);
-        } else {
-            textIndex = (textIndex + 1) % textArray.length;
-            setTimeout(typeText, typingSpeed);
-        }
-    }
+    startInfiniteScroll(); // Start the scrolling animation
+});
 
-    // Start typing effect on page load
-    document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(typeText, delayBetweenTexts);
-    });
+
+   
 
