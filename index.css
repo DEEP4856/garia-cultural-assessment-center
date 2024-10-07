@@ -139,6 +139,11 @@
 
 
 
+
+
+
+
+
 /* enroll box */
 /* Main Enrollment Section */
 .enrollment-section {
@@ -170,10 +175,11 @@
 
 /* Caption Styles */
 .enroll-box h2, .steps-box h2 {
-    font-size: 28px;
+    font-size: 34px;
     margin-bottom: 20px;
     color: #ffffff;
     text-align: center;
+    font-weight: 700;
 }
 
 .enroll-box p{
@@ -283,6 +289,9 @@
 
 
 
+
+
+
 .modal-header {
     background-color: #410c1c;
     color: white;
@@ -305,9 +314,30 @@ button.close {
 
 
 
+
+
+
+
+/* modal */
+.form-label-bold {
+    font-weight: bold;
+    color: #000000 !important;
+    margin-bottom: 5px;
+    display: block;
+}
+/* modal */
+
+
+
+
+
+
+
+
+
 /* enroll box -2 */
 .contact-section {
-    background-color:#410c1c; /* Brown background color */
+    background-color: #410c1c; /* Brown background color */
     padding: 60px 20px;
 }
 
@@ -331,6 +361,14 @@ button.close {
     width: 200px;
     height: auto;
     margin-bottom: 20px;
+}
+
+/* New Bold Caption below Right Side Text */
+.additional-caption {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0c040; /* Yellow color */
+    margin-top: 20px;
 }
 
 /* Icon container */
@@ -374,6 +412,7 @@ button.close {
 
 
 
+
 /* wp-icon */
 .whatsapp-float {
     position: fixed;
@@ -402,6 +441,10 @@ button.close {
 
 
 /* enquiry-form */
+
+
+
+
 .contact-section {
     padding: 40px 0;
 }
@@ -575,3 +618,39 @@ button.close {
         width: 60%;
     }
 }
+
+
+
+
+
+/* 3rd year promo */
+.videos-section {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.caption-box h2 {
+    font-size: 28px;
+    color: #410c1c;
+    margin-bottom: 20px;
+}
+
+.custom-video-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    height: 30vh;
+}
+
+.custom-video-card:hover {
+    transform: scale(1.03);
+}
+
+.custom-video-card iframe {
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+}
+
