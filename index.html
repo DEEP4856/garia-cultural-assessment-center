@@ -54,11 +54,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Members</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         </ul>
     </div>
 </nav>
@@ -67,14 +67,14 @@
 <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="./assets/banner-9.jpg" class="d-block w-100" height="500" alt="First Slide" loading="lazy"/>
+            <img src="./assets/dc-3.jpg" class="d-block w-100" height="500" alt="First Slide" loading="lazy"/>
         </div>
         <!-- <div class="carousel-item">
             <img src="./assets/banner-2.jfif" class="d-block w-100" height="500" alt="Second Slide" loading="lazy"/>
         </div> -->
-        <div class="carousel-item">
+        <!-- <div class="carousel-item">
             <img src="./assets/banner-3.jpg" class="d-block w-100" height="500" alt="Third Slide" loading="lazy"/>
-        </div>
+        </div> -->
         <div class="carousel-item">
             <img src="./assets/banner-5.jpg" class="d-block w-100" height="500" alt="Third Slide" loading="lazy"/>
         </div>
@@ -84,9 +84,9 @@
         <div class="carousel-item">
             <img src="./assets/banner-7.jpg" class="d-block w-100" height="500" alt="Third Slide" loading="lazy"/>
         </div>
-        <div class="carousel-item">
+        <!-- <div class="carousel-item">
             <img src="./assets/banner-9.jpg" class="d-block w-100" height="500" alt="Third Slide" loading="lazy"/>
-        </div>
+        </div> -->
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -192,9 +192,9 @@
         <h2> Enrollment Procedure</h2>
         <ol>
             <li>Fill The application Form</li>
-            <li>Scan the Given QR Code and Complete the payment Process</li>
-            <li>Send a Screen Shot of Payment with Transaction Id in the given WhatsApp number <B>(9433515312)</B></li>
-            <li>Send Your Videos to our WhatsApp,  Telegram, and email</li>
+            <li>Scan the  QR Code and Complete the payment Process</li>
+            <li>Send a Screenshot of Payment with Transaction Id in the given WhatsApp number <B>(9433515312)</B></li>
+            <li>Send Your Videos through WhatsApp,  Telegram, and email</li>
         </ol>
     </div>
 </section>
@@ -211,144 +211,165 @@
         </div>
         <div class="modal-body">
           <!-- Form inside the modal -->
-          <form>
+          <form id="enrollmentForm">
             <div class="form-group">
               <label for="email" class="form-label-bold">Email Address</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              <div class="invalid-feedback">Please enter your email address.</div>
             </div>
   
             <div class="form-group">
-              <label for="submissionMethod" class="form-label-bold">Please mention & send your performance through this No. 9836672782</label>
-              <select class="form-control" id="submissionMethod">
-                <option selected disabled>Choose one</option>
-                <option>WhatsApp App</option>
+              <label for="submissionMethod" class="form-label-bold">Please mention & send your performance through</label>
+              <select class="form-control" id="submissionMethod" required>
+                <option value="" disabled selected>Choose one</option>
+                <option>WhatsApp</option>
                 <option>Telegram App</option>
                 <option>Email: info@gcac-essenceofculture.org</option>
               </select>
+              <div class="invalid-feedback">Please select a submission method.</div>
             </div>
   
             <div class="form-group">
               <label for="transactionId" class="form-label-bold">Registration fees Rs.150/- 
-                Please mention Transaction ID after payment through Google Pay - (G-Pay No. - +919433515312)
-              </label>
-              <input type="text" class="form-control" id="transactionId" placeholder="Enter Transaction ID">
+                Please mention Transaction ID after payment through Google Pay -  (G-Pay No. - +919433515312)</label>
+              <input type="text" class="form-control" id="transactionId" placeholder="Enter Transaction ID" required>
+              <div class="invalid-feedback">Please enter the transaction ID.</div>
             </div>
   
             <div class="form-group">
-              <label for="paintingSubject" class="form-label-bold">Painting Subject which must follow:</label>
-              <select class="form-control" id="paintingSubject">
-                <option selected disabled>please select</option>
+              <label for="paintingSubject" class="form-label-bold">Painting Subject which must follow :-</label>
+              <select class="form-control" id="paintingSubject" required>
+                <option value="" disabled selected>Please select</option>
                 <option>Group A - Draw as you like</option>
                 <option>Group B - Holi or Durga Puja Festival</option>
                 <option>Group C - Temple or Nature</option>
                 <option>Group D - Hill Station or Taxi Stand</option>
               </select>
+              <div class="invalid-feedback">Please select a painting subject.</div>
             </div>
   
             <div class="form-group">
               <label for="participantName" class="form-label-bold">Name of the Participant</label>
-              <input type="text" class="form-control" id="participantName" placeholder="Enter your name">
+              <input type="text" class="form-control" id="participantName" placeholder="Enter your name" required>
+              <div class="invalid-feedback">Please enter the participant's name.</div>
             </div>
   
             <div class="form-group">
               <label for="guardianName" class="form-label-bold">Name of Father / Guardian</label>
-              <input type="text" class="form-control" id="guardianName" placeholder="Enter guardian name">
+              <input type="text" class="form-control" id="guardianName" placeholder="Enter guardian name" required>
+              <div class="invalid-feedback">Please enter the guardian's name.</div>
             </div>
   
             <div class="form-group">
               <label for="address" class="form-label-bold">Full Address of the Participant</label>
-              <input type="text" class="form-control" id="address" placeholder="Enter your address">
+              <input type="text" class="form-control" id="address" placeholder="Enter your address" required>
+              <div class="invalid-feedback">Please enter your address.</div>
             </div>
   
             <div class="form-group">
-              <label for="contactNumber" class="form-label-bold">Participant or Guardian Contact No.</label>
-              <input type="tel" class="form-control" id="contactNumber" placeholder="Enter contact number">
+              <label for="contactNumber" class="form-label-bold">Contact No.</label>
+              <input type="tel" class="form-control" id="contactNumber" placeholder="Enter contact number" required>
+              <div class="invalid-feedback">Please enter a contact number.</div>
             </div>
   
             <div class="form-group">
-              <label for="dob" class="form-label-bold">Date of Birth (DD-MM-YYYY)</label>
-              <input type="tel" class="form-control" id="dob" placeholder="Enter date of birth">
+              <label for="dob" class="form-label-bold">Date of Birth</label>
+              <input type="date" class="form-control" id="dob" required>
+              <div class="invalid-feedback">Please select your date of birth.</div>
             </div>
   
             <div class="form-group">
               <label for="gender" class="form-label-bold">Gender</label>
-              <select class="form-control" id="gender">
-                <option selected disabled>please select</option>
+              <select class="form-control" id="gender" required>
+                <option value="" disabled selected>Please select</option>
                 <option>Male</option>
                 <option>Female</option>
                 <option>Transgender</option>
               </select>
+              <div class="invalid-feedback">Please select your gender.</div>
             </div>
-
-
-
+  
             <div class="form-group">
-              <label for="gender" class="form-label-bold">Performing Group</label>
-              <select class="form-control" id="gender">
-                <option selected disabled>Performing Group</option>
+              <label for="performingGroup" class="form-label-bold">Performing Group</label>
+              <select class="form-control" id="performingGroup" required>
+                <option value="" disabled selected>Select Performing Group</option>
                 <option>Group - A (Up to 7 Years)</option>
                 <option>Group - B (8 To 12 Years)</option>
                 <option>Group - C (13 to 17 Years)</option>
                 <option>Group - D (For General - any age)</option>
               </select>
+              <div class="invalid-feedback">Please select a performing group.</div>
             </div>
-
-
-          
+  
             <div class="form-group">
               <label for="education" class="form-label-bold">Educational Qualification</label>
-              <input type="text" class="form-control" id="education" placeholder="Enter your educational qualification">
+              <input type="text" class="form-control" id="education" placeholder="Enter your educational qualification" required>
+              <div class="invalid-feedback">Please enter your educational qualification.</div>
             </div>
 
-
             <div class="form-group">
-              <label for="education" class="form-label-bold">Name of the Guru / School / Organisation</label>
-              <input type="text" class="form-control" id="education" placeholder="Enter your educational qualification">
+                <label for="Subject for participation" class="form-label-bold">Subject for participation
+                </label>
+                <select class="form-control" id="Subject for participation" required>
+                  <option value="" disabled selected>Subject for participation
+                </option>
+                  <option>Art / Painting</option>
+                  <option>Song</option>
+                  
+                  <option>Dance</option>
+                  <option>Tabla</option>
+                  <option>Recitation</option>
+                </select>
+  
+            <div class="form-group">
+              <label for="guruName" class="form-label-bold">Name of the Guru / School / Organisation</label>
+              <input type="text" class="form-control" id="guruName" placeholder="Enter the name of your guru, school, or organisation" required>
+              <div class="invalid-feedback">Please enter the name of the Guru/School/Organisation.</div>
             </div>
   
             <div class="form-group">
               <label for="nationality" class="form-label-bold">Nationality</label>
-              <input type="text" class="form-control" id="nationality" placeholder="Enter your nationality">
+              <input type="text" class="form-control" id="nationality" placeholder="Enter your nationality" required>
+              <div class="invalid-feedback">Please enter your nationality.</div>
             </div>
-             
-
-
+  
             <div class="form-group">
-                <label for="gender" class="form-label-bold">Reference Details</label>
-                <select class="form-control" id="gender">
-                  <option selected disabled>Reference Details</option>
-                  <option>Training Centre</option>
-                  <option>Facebook</option>
-                  <option>What's  App</option>
-                  <option>Instagram</option>
-                  <option>YouTube Channel</option>
-                  <option>Other source</option>
-                </select>
-              </div>
-
-
+              <label for="referenceDetails" class="form-label-bold">Reference Details</label>
+              <select class="form-control" id="referenceDetails" required>
+                <option value="" disabled selected>Select Reference Details</option>
+                <option>Training Centre</option>
+                <option>Facebook</option>
+                <option>WhatsApp</option>
+                <option>Instagram</option>
+                <option>YouTube Channel</option>
+                <option>Other source</option>
+              </select>
+              <div class="invalid-feedback">Please select a reference detail.</div>
+            </div>
+  
             <div class="form-group">
-                <label for="gender" class="form-label-bold">Declaration : I declare that the particulars given above in the form are true and correct. I accept full liability for any action against me under the rules and regulations of the GCAC. I will obey all the rules & regulations of GCAC. further declare that I am fully aware of recognition of certifications / awarded by Garia Cultural Assessment Centre & fully satisfied about the same.</label>
-                <select class="form-control" id="gender">
-                  <option selected disabled>select</option>
-                  <option>I Agree</option>
-                  <option>I disagree</option>
-                  
-                </select>
-              </div>
-    
-
+              <label for="declaration" class="form-label-bold">Declaration : I declare that the particulars given above in the form are true and correct. I accept full liability for any action against me under the rules and regulations of the GCAC. I will obey all the rules & regulations of GCAC. further declare that I am fully aware of recognition of certifications / awarded by Garia Cultural Assessment Centre & fully satisfied about the same.</label>
+              <select class="form-control" id="declaration" required>
+                <option value="" disabled selected>Select</option>
+                <option>I Agree</option>
+              </select>
+              <div class="invalid-feedback">Please accept the declaration.</div>
+            </div>
+  
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
       </div>
     </div>
   </div>
+</div> 
+
+
                                               
 <!-- enroll box -->
 
 
-
+ 
 
 <!-- enroll second box -->
 <section class="contact-section">
@@ -357,19 +378,19 @@
             <!-- Left side: QR Code and Caption -->
             <div class="left-section col-md-6">
                 <span class="left-caption">Scan for Payment</span>
-                <img src="./assets/QR-PAYMENT.jpeg" alt="QR Code" class="qr-code">
+                <img src="./assets/qr-cropped.jpeg" alt="QR Code" class="qr-code">
             </div>
 
             <!-- Right side: Caption, Icons, and New Bold Caption -->
             <div class="right-section col-md-6">
-                <span class="right-caption">Send Your Videos to Our</span>
+                <span class="right-caption">Send Your Videos Through</span>
                 <div class="icon-container">
                     <a href="https://wa.me/9836672782" target="_blank" class="icon-link"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://telegram.me/9836672782" target="_blank" class="icon-link"><i class="fab fa-telegram"></i></a>
+                    <a href="https://t.me/+919836672782" target="_blank" class="icon-link"><i class="fab fa-telegram"></i></a>
                     <a href="mailto:info@gcac-essenceofculture.org" class="icon-link"><i class="fas fa-envelope"></i></a>
                 </div>
                 <span class="additional-caption">Registration fees Rs.150/-  <br>
-                    G-Pay No. - +919433515312</span> <!-- New caption added here -->
+                  Please Mention Transaction id</span> <!-- New caption added here -->
             </div>
         </div>
     </div>
@@ -594,7 +615,7 @@
 <div class="copyright-section">
     <div class="container text-center">
         <p>&copy; 2024 GARIA CULTURAL ASSESSMENT CENTRE. All rights reserved. </p>
-        <p>   <a href="https://www.royinformatics.com/" style="color: aliceblue;"> <h4>Designed & Developed by Roy Informatics</h4> </a></p>
+        <p><a href="https://www.royinformatics.com/" style="color: aliceblue;"> <h4>Designed & Developed by Roy Informatics</h4> </a></p>
     </div>
 </div>
 
@@ -607,6 +628,7 @@
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
