@@ -47,7 +47,7 @@
   .info-box {
     flex: 1 1 22%; /* Make all boxes equal width to fit 4 in a row */
     max-width: 22%; /* Ensures that each box takes up 22% width */
-    min-width: 250px; /* Ensures a minimum width for smaller screens */
+    min-width: 280px; /* Ensures a minimum width for smaller screens */
     height: 100%; /* Allows for consistent height with align-items: stretch */
     border: 2px solid #3e2723;
     border-radius: 8px;
@@ -79,6 +79,8 @@
     color: #3e2723;
     margin-right: 8px;
   }
+
+
   
   .social-icons a {
     color: #3e2723;

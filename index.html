@@ -57,7 +57,7 @@
             <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
             <li class="nav-item"><a class="nav-link" href="member.html">Members</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         </ul>
     </div>
@@ -409,7 +409,7 @@
 
 <section class="typing-section">
     <div class="text-center">
-        <span class="large-caption">Introduction of the Organisation</span>
+        <span class="large-caption" style="font-family: algerian;">Introduction of the Organisation</span>
         <p class="description">
             The GARIA CULTURAL ASSESSMENT CENTRE (GCAC) is one of the premier Assessment Board working
             in the field of cultural education. Established in 2020, it functions as an autonomous organization
@@ -507,16 +507,19 @@
             <!-- Right side: Enquiry Form -->
             <div class="col-lg-6 col-md-12 enquiry-form">
                 <h2>Enquiry Form</h2>
-                <form>
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="7c4d5119-4455-42c9-8430-3fe5215ff96c">
                     <div class="row">
                         <!-- First row of inputs (Name and Organization Name) -->
                         <div class="col-md-6 form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name">
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="org-name">Organization Name</label>
-                            <input type="text" class="form-control" id="org-name" placeholder="Enter organization name">
+                            <input type="text" name="orgname" class="form-control" id="org-name" placeholder="Enter organization name">
                         </div>
                     </div>
                     
@@ -524,11 +527,11 @@
                         <!-- Second row of inputs (Phone and Location) -->
                         <div class="col-md-6 form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                            <input type="tel" name="phone" class="form-control" id="phone" placeholder="Enter your phone number">
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="location">Location/Area</label>
-                            <input type="text" class="form-control" id="location" placeholder="Enter your location/area">
+                            <input type="text" name="location" class="form-control" id="location" placeholder="Enter your location/area">
                         </div>
                     </div>
                     
@@ -536,14 +539,14 @@
                         <!-- Third row of inputs (Email) -->
                         <div class="col-md-12 form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email">
                         </div>
                     </div>
 
                     <!-- Message Box at the bottom -->
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                        <textarea class="form-control" name="message" id="message" rows="4" placeholder="Enter your message"></textarea>
                     </div>
 
                     <!-- Submit button -->
@@ -577,11 +580,11 @@
             <div class="col-lg-4 col-md-12 footer-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Members</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="member.html">Members</a></li>
                     <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
 
@@ -600,7 +603,7 @@
 
                 <div class="social-icons">
                     <a href="https://www.facebook.com/GCACKolkata?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/gcac2021?igsh=MWQybXI4eGlyZzBieg%3D%3D" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://wa.me/9836672782" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://www.youtube.com/@gariaculturalassessmentcen8987?si=e8pLCTI665-PXE7c" target="_blank"><i class="fab fa-youtube"></i></a>
                 </div>

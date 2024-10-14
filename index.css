@@ -97,11 +97,12 @@
 
 .large-caption {
     font-size: 48px;
-    font-weight: bold;
+    font-weight: 500;
     color: #410c1c;
     display: inline-block;
     opacity: 0;
     animation: fadeInScale 2s forwards; /* New fade-in with scale effect */
+    font-family:  algerian;
 }
 
 .description {
@@ -513,6 +514,7 @@ button.close {
     font-size: 2.5rem;
     color:#410c1c;
     margin-bottom: 40px;
+    font-family:  algerian;
 }
 
 /* Video Section Styling */

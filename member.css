@@ -1,0 +1,113 @@
+.image-card-section {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .section-caption {
+    font-size: 2rem;
+    color: #3e2723;
+    margin-bottom: 30px;
+    font-weight: 550;
+  }
+  
+  .image-card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .image-card {
+    width: 30%;
+    max-width: 300px;
+    padding: 15px;
+    /* background-color: rgba(255, 255, 255, 0.699); */
+    border-radius: 8px;
+    /* box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); */
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .image-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 40vh;
+  }
+  
+  .image-caption {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #3e2723;
+    font-weight: 600;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes slideInFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100vw);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100vw);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Default states */
+  .card-left, .card-right, .card-bottom {
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-out;
+  }
+  
+  /* Visible states triggered by scroll */
+  .card-left.visible {
+    animation: slideInFromRight 1s ease-out forwards;
+  }
+  
+  .card-right.visible {
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+  
+  .card-bottom.visible {
+    animation: slideInFromBottom 1s ease-out forwards;
+  }
+  
+
+
+  @media (max-width:600px){
+    .image-card-container{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .image-card{
+        width: 85%;
+    }
+  }
