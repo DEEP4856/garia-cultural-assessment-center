@@ -24,7 +24,7 @@
 .middle-logo {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-56%);
  
 
 }
@@ -45,7 +45,7 @@
 }
 
 .iso-logo-img {
-    height: 29vh;
+    height: 24vh;
     width: auto;
 }
 

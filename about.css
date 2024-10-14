@@ -18,6 +18,12 @@
     border-bottom: 2px solid #3e2723;
   }
 
+  .description{
+    margin: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+
   .description-list {
     list-style: none;
     padding: 20px;
