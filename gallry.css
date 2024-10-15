@@ -260,6 +260,7 @@
     height: 200px; /* Set a fixed height for consistency */
 }
 
+
 .video-card-3 video {
     /* width: 100%; */
     height: 100%; /* Fill the card */
@@ -277,5 +278,6 @@
 @media (max-width: 500px) {
     .video-card-3 {
         flex: 1 1 calc(100% - 20px); /* 1 video per row */
+        margin-left: 6px;
     }
 }
