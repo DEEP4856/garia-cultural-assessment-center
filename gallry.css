@@ -278,6 +278,7 @@
 @media (max-width: 500px) {
     .video-card-3 {
         flex: 1 1 calc(100% - 20px); /* 1 video per row */
-        margin-left: 6px;
+        /* margin-left: 13px; */
+        text-align: center;
     }
 }
