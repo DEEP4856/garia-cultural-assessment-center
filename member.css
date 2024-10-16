@@ -113,7 +113,44 @@
   }
 
 
+/* not required */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+/* new section */
 
 
   .committee-section {
@@ -122,6 +159,7 @@
     max-width: 1200px; /* Limiting max width */
     margin: 0 auto; /* Center the section */
     overflow: hidden; /* Prevent overflow */
+    margin-bottom: 50px;
   }
 
   .committee-caption {
@@ -227,4 +265,34 @@
 
 
 
- 
+
+
+
+
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    opacity: 0; /* Start as invisible */
+    transform: translateX(100%); /* Start from right */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transitions */
+}
+
+.swiper-slide-active {
+    opacity: 1; /* Make the active slide visible */
+    transform: translateX(0); /* Move to the center */
+}
+
+.swiper-slide-next {
+    opacity: 0; /* Make next slide invisible */
+    transform: translateX(100%); /* Move next slide to the right */
+}
+
+.swiper-slide-prev {
+    opacity: 0; /* Make previous slide invisible */
+    transform: translateX(-100%); /* Move previous slide to the left */
+}
+

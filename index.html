@@ -211,16 +211,20 @@
         </div>
         <div class="modal-body">
           <!-- Form inside the modal -->
-          <form id="enrollmentForm">
+          <form id="enrollmentForm" action="https://api.web3forms.com/submit" method="POST">
+
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="7c4d5119-4455-42c9-8430-3fe5215ff96c">
+          
             <div class="form-group">
               <label for="email" class="form-label-bold">Email Address</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required>
               <div class="invalid-feedback">Please enter your email address.</div>
             </div>
   
             <div class="form-group">
               <label for="submissionMethod" class="form-label-bold">Please mention & send your performance through</label>
-              <select class="form-control" id="submissionMethod" required>
+              <select name="platform" class="form-control" id="submissionMethod" required>
                 <option value="" disabled selected>Choose one</option>
                 <option>WhatsApp</option>
                 <option>Telegram App</option>
@@ -583,7 +587,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="member.html">Members</a></li>
-                    <li><a href="#">Gallery</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
