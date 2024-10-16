@@ -105,7 +105,7 @@
 
 
 <section class="image-card-section">
-    <h2 class="section-caption" style="font-family: algerian;" >All India Winners Glimpses of 1st and 2nd year Competition</h2>
+    <h2 class="section-caption" style="font-family: algerian;" >SUCCESSFUL PRIZE WINNERS OF 1ST & 2ND YEAR TALENT SERACH</h2>
   <div class="gallery-container">
    
 
@@ -177,50 +177,51 @@
     <!-- Section Caption -->
     <div class="custom-caption">Certificate Glimpses</div>
 
-    <!-- Image Gallery Container -->
-    <div class="custom-gallery">
-        <div class="custom-card" onclick="openCustomModal('./assets/10_.jpeg')">
-            <img src="./assets/10_.jpeg" alt="Image 1">
-        </div>
-        <div class="custom-card" onclick="openCustomModal('./assets/13_.jpeg')">
-            <img src="./assets/13_.jpeg" alt="Image 2">
-        </div>
-        <div class="custom-card" onclick="openCustomModal('./assets/14_.jpeg')">
-            <img src="./assets/14_.jpeg" alt="Image 3">
-        </div>
-        <div class="custom-card" onclick="openCustomModal('./assets/3_.jpeg')">
-            <img src="./assets/3_.jpeg" alt="Image 4">
-        </div>
-       
-     
+   <!-- Image Gallery Container -->
+<div class="custom-gallery">
+    <div class="custom-card" onclick="openCustomModal('./assets/cer-1.jpeg', 'WINNERS CERTIFICATE FOR TALENT SEARCH COMPETITION')">
+        <img src="./assets/cer-1.jpeg" alt="Image 1">
+        <div class="caption">WINNERS CERTIFICATE FOR TALENT SEARCH COMPETITION</div>
     </div>
-
-    <!-- Modal for Large Image Display -->
-    <div class="custom-modal" id="imageModal" onclick="closeCustomModal()">
-        <span class="close-custom-btn" onclick="closeCustomModal()">&times;</span>
-        <img id="modalImage" src="" alt="Large View">
+    <div class="custom-card" onclick="openCustomModal('./assets/cer-2.jpeg', 'CENTER AFFILIATION CERTIFICATE')">
+        <img src="./assets/cer-2.jpeg" alt="Image 2">
+        <div class="caption">CENTER AFFILIATION CERTIFICATE</div>
     </div>
+    <div class="custom-card" onclick="openCustomModal('./assets/cer-3.jpeg', 'YEARLY ASSESSMENT CERTIFICATE')">
+        <img src="./assets/cer-3.jpeg" alt="Image 3">
+        <div class="caption">YEARLY ASSESSMENT CERTIFICATE</div>
+    </div>
+    <div class="custom-card" onclick="openCustomModal('./assets/cer-4.jpeg', 'TALENT SEARCH PARTICIPATION CERTIFICATE')">
+        <img src="./assets/cer-4.jpeg" alt="Image 4">
+        <div class="caption">TALENT SEARCH PARTICIPATION CERTIFICATE</div>
+    </div>
+</div>
 
-    <script>
-        // Open modal function
-        function openCustomModal(imageSrc) {
-            const modal = document.getElementById('imageModal');
-            const modalImage = document.getElementById('modalImage');
-            modal.style.display = 'flex';
-            modalImage.src = imageSrc; // Set the source of the modal image
-        }
+<!-- Modal for Large Image Display -->
+<div class="custom-modal" id="imageModal" onclick="closeCustomModal()">
+    <span class="close-custom-btn" onclick="closeCustomModal()">&times;</span>
+    <img id="modalImage" src="" alt="Large View">
+    <div id="modalCaption" class="modal-caption"></div>
+</div>
 
-        // Close modal function
-        function closeCustomModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
-        }
-    </script>
+<script>
+    // Open modal function
+    function openCustomModal(imageSrc, captionText) {
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+        modal.style.display = 'flex';
+        modalImage.src = imageSrc; // Set the source of the modal image
+        modalCaption.textContent = captionText; // Set the caption text
+    }
+
+    // Close modal function
+    function closeCustomModal() {
+        const modal = document.getElementById('imageModal');
+        modal.style.display = 'none';
+    }
+</script>
 <!-- //   section -2  --> 
-
-
-
-
 
 
 
@@ -234,10 +235,10 @@
 
 
 <!-- Section Caption -->
-<div class="video-caption">Program Glimpses</div>
+<!-- <div class="video-caption">Program Glimpses</div> -->
 
 <!-- Video Gallery Container -->
-<div class="video-gallery">
+<!-- <div class="video-gallery">
     <div class="video-card-3">
         <video controls>
             <source src="path-to-your-video1.mp4" type="video/mp4">
@@ -274,12 +275,73 @@
             Your browser does not support the video tag.
         </video>
     </div>
-</div>
+</div> -->
 <!-- section -3 -->
   
  
 
   
+
+
+<!-- FOR TEMPORARY PROGRAM GLIMPSES -->
+<section class="videos-section">
+    <div class="container">
+        <!-- Caption in the middle -->
+        <div class="caption-box text-center mb-4">
+            <h2>Program Glimpses</h2>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="row">
+            <!-- Video Card 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="custom-video-card">
+                    <iframe width="100%" height="215" src="https://www.youtube.com/embed/oJ8Kyo8QFTs?si=GGgbyBbxF1mO8B-J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <!-- Video Card 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="custom-video-card">
+                    <iframe width="100%" height="215" src="https://www.youtube.com/embed/rY538JHnx5s?si=WG27bposrqjBruJt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <!-- Video Card 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="custom-video-card">
+                    <iframe width="100%" height="215" src="https://www.youtube.com/embed/3tg3CkD5vuc?si=r1CX7ldmJpG7cqEF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+
+
+            <!-- VIDEO CARD 4 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="custom-video-card">
+                    <iframe width="100%" height="215" src="https://www.youtube.com/embed/miAUga9E7TU?si=qwa5_xphCAbdhZ8Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+            <!-- VIDEO CARD 5 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="custom-video-card">
+                    <iframe width="100%" height="215" src="https://www.youtube.com/embed/R7sx9KRb16s?si=r24oQqlzDfGe4sqH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD 6 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="custom-video-card">
+                    <iframe width="100%" height="215" src="https://www.youtube.com/embed/kmRKO1uBvow?si=uZYdBNNliYPogpuO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FOR TEMPORARY PROGRAM GLIMPSES -->
 
 
 
