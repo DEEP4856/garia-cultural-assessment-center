@@ -1,3 +1,97 @@
+
+.committee-section {
+  margin-top: 18px;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.committee-caption {
+  font-family: 'Algerian', serif;
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+  color: #641f34;
+}
+
+.swiper-container-2 {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.committee-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 8px;
+  /* background: #f9f9f9; */
+}
+
+.committee-image {
+  max-width: 200px;
+  width: 100%;
+  height: 200px;
+  border-radius: 10%;
+  margin-right: 20px;
+}
+
+.text-content {
+  text-align: left;
+}
+
+.card-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.text-content p {
+  margin: 5px 0;
+  /* font-size: 1.2rem; */
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .committee-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .committee-image {
+    margin: 0 0 15px 0;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .section-container {
     width: 85%;
     max-width: 900px;

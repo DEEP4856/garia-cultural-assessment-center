@@ -107,7 +107,7 @@
 <!-- Notice Box -->
 <div class="notice-box mt-3">
     <div class="notice-content text-center p-3 bg-warning text-dark">
-        ⚠️ Important Notice: Our services will be unavailable this weekend due to scheduled maintenance. Please save your work and plan accordingly. Thank you for understanding! ⚠️
+        ⚠️ Important Notice: "Enroll now! Registration is open from 1st Dec 24 to 31 Jan 25. Act fast to guarantee your place. Thank you for understanding!" ⚠️
     </div>
 </div>
 <!-- notice box -->
@@ -186,7 +186,7 @@
         <h2>Enroll Now</h2>
         <p>3rd International Online Cultural Talent Search 2024-2025.</p>
         <!-- Button to trigger modal -->
-        <a href="#" class="enroll-button" data-toggle="modal" data-target="#enrollModal">Click Here </a>
+        <a href="#" style="text-decoration: none;" class="enroll-button" data-toggle="modal" data-target="#enrollModal">Click Here </a>
     </div>
     <div class="steps-box">
         <h2> Enrollment Procedure</h2>
@@ -218,13 +218,13 @@
           
             <div class="form-group">
               <label for="email" class="form-label-bold">Email Address</label>
-              <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required>
+              <input type="email" name="email" class="form-control"  placeholder="Enter your email" required>
               <div class="invalid-feedback">Please enter your email address.</div>
             </div>
   
             <div class="form-group">
               <label for="submissionMethod" class="form-label-bold">Please mention & send your performance through</label>
-              <select name="platform" class="form-control" id="submissionMethod" required>
+              <select name=" video-sharing-platform" class="form-control" id="submissionMethod" required>
                 <option value="" disabled selected>Choose one</option>
                 <option>WhatsApp</option>
                 <option>Telegram App</option>
@@ -236,13 +236,13 @@
             <div class="form-group">
               <label for="transactionId" class="form-label-bold">Registration fees Rs.150/- 
                 Please mention Transaction ID after payment </label>
-              <input type="text" class="form-control" id="transactionId" placeholder="Enter Transaction ID" required>
+              <input type="text" name="transaction-id" class="form-control" id="transactionId" placeholder="Enter Transaction ID" required>
               <div class="invalid-feedback">Please enter the transaction ID.</div>
             </div>
   
             <div class="form-group">
               <label for="paintingSubject" class="form-label-bold">Painting Subject which must follow :-</label>
-              <select class="form-control" id="paintingSubject" required>
+              <select name="paintingSubject" class="form-control"  required>
                 <option value="" disabled selected>Please select</option>
                 <option>Group A - Draw as you like</option>
                 <option>Group B - Holi or Durga Puja Festival</option>
@@ -254,37 +254,37 @@
   
             <div class="form-group">
               <label for="participantName" class="form-label-bold">Name of the Participant</label>
-              <input type="text" class="form-control" id="participantName" placeholder="Enter your name" required>
+              <input type="text" name="participantName" class="form-control" placeholder="Enter your name" required>
               <div class="invalid-feedback">Please enter the participant's name.</div>
             </div>
   
             <div class="form-group">
               <label for="guardianName" class="form-label-bold">Name of Father / Guardian</label>
-              <input type="text" class="form-control" id="guardianName" placeholder="Enter guardian name" required>
+              <input type="text" class="form-control" name="guardianName" placeholder="Enter guardian name" required>
               <div class="invalid-feedback">Please enter the guardian's name.</div>
             </div>
   
             <div class="form-group">
               <label for="address" class="form-label-bold">Full Address of the Participant</label>
-              <input type="text" class="form-control" id="address" placeholder="Enter your address" required>
+              <input type="text" class="form-control" name="address" placeholder="Enter your address" required>
               <div class="invalid-feedback">Please enter your address.</div>
             </div>
   
             <div class="form-group">
               <label for="contactNumber" class="form-label-bold">Contact No.</label>
-              <input type="tel" class="form-control" id="contactNumber" placeholder="Enter contact number" required>
+              <input type="tel" class="form-control" name="contactNumber" placeholder="Enter contact number" required>
               <div class="invalid-feedback">Please enter a contact number.</div>
             </div>
   
             <div class="form-group">
               <label for="dob" class="form-label-bold">Date of Birth</label>
-              <input type="date" class="form-control" id="dob" required>
+              <input type="date" class="form-control" name="dob" required>
               <div class="invalid-feedback">Please select your date of birth.</div>
             </div>
   
             <div class="form-group">
               <label for="gender" class="form-label-bold">Gender</label>
-              <select class="form-control" id="gender" required>
+              <select class="form-control" name="gender" required>
                 <option value="" disabled selected>Please select</option>
                 <option>Male</option>
                 <option>Female</option>
@@ -295,7 +295,7 @@
   
             <div class="form-group">
               <label for="performingGroup" class="form-label-bold">Performing Group</label>
-              <select class="form-control" id="performingGroup" required>
+              <select class="form-control" name="performingGroup" required>
                 <option value="" disabled selected>Select Performing Group</option>
                 <option>Group - A (Up to 7 Years)</option>
                 <option>Group - B (8 To 12 Years)</option>
@@ -307,14 +307,14 @@
   
             <div class="form-group">
               <label for="education" class="form-label-bold">Educational Qualification</label>
-              <input type="text" class="form-control" id="education" placeholder="Enter your educational qualification" required>
+              <input type="text" class="form-control" name="education" placeholder="Enter your educational qualification" required>
               <div class="invalid-feedback">Please enter your educational qualification.</div>
             </div>
 
             <div class="form-group">
                 <label for="Subject for participation" class="form-label-bold">Subject for participation
                 </label>
-                <select class="form-control" id="Subject for participation" required>
+                <select class="form-control" name="Subject for participation" required>
                   <option value="" disabled selected>Subject for participation
                 </option>
                   <option>Art / Painting</option>
@@ -327,19 +327,19 @@
   
             <div class="form-group">
               <label for="guruName" class="form-label-bold">Name of the Guru / School / Organisation</label>
-              <input type="text" class="form-control" id="guruName" placeholder="Enter the name of your guru, school, or organisation" required>
+              <input type="text" class="form-control" name="guruName" placeholder="Enter the name of your guru, school, or organisation" required>
               <div class="invalid-feedback">Please enter the name of the Guru/School/Organisation.</div>
             </div>
   
             <div class="form-group">
               <label for="nationality" class="form-label-bold">Nationality</label>
-              <input type="text" class="form-control" id="nationality" placeholder="Enter your nationality" required>
+              <input type="text" class="form-control" name="nationality" placeholder="Enter your nationality" required>
               <div class="invalid-feedback">Please enter your nationality.</div>
             </div>
   
             <div class="form-group">
               <label for="referenceDetails" class="form-label-bold">Reference Details</label>
-              <select class="form-control" id="referenceDetails" required>
+              <select class="form-control" name="referenceDetails" required>
                 <option value="" disabled selected>Select Reference Details</option>
                 <option>Training Centre</option>
                 <option>Facebook</option>
@@ -353,7 +353,7 @@
   
             <div class="form-group">
               <label for="declaration" class="form-label-bold">Declaration : I declare that the particulars given above in the form are true and correct. I accept full liability for any action against me under the rules and regulations of the GCAC. I will obey all the rules & regulations of GCAC. further declare that I am fully aware of recognition of certifications / awarded by Garia Cultural Assessment Centre & fully satisfied about the same.</label>
-              <select class="form-control" id="declaration" required>
+              <select class="form-control" name="I declare that the particulars given above in the form are true and correct. I accept full liability for any action against me under the rules and regulations of the GCAC. I will obey all the rules & regulations of GCAC. further declare that I am fully aware of recognition of certifications / awarded by Garia Cultural Assessment Centre & fully satisfied about the same." required>
                 <option value="" disabled selected>Select</option>
                 <option>I Agree</option>
               </select>
@@ -476,7 +476,6 @@
     </div>
 </section>
 
-
 <!-- our well wishers message -->
 
 
@@ -519,11 +518,11 @@
                         <!-- First row of inputs (Name and Organization Name) -->
                         <div class="col-md-6 form-group">
                             <label for="name">Name</label>
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name">
+                            <input type="text" name="name" class="form-control" placeholder="Enter your name">
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="org-name">Organization Name</label>
-                            <input type="text" name="orgname" class="form-control" id="org-name" placeholder="Enter organization name">
+                            <input type="text"  class="form-control" name="org-name" placeholder="Enter organization name">
                         </div>
                     </div>
                     
@@ -531,11 +530,11 @@
                         <!-- Second row of inputs (Phone and Location) -->
                         <div class="col-md-6 form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" name="phone" class="form-control" id="phone" placeholder="Enter your phone number">
+                            <input type="tel" name="phone" class="form-control"  placeholder="Enter your phone number">
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="location">Location/Area</label>
-                            <input type="text" name="location" class="form-control" id="location" placeholder="Enter your location/area">
+                            <input type="text" name="location" class="form-control"  placeholder="Enter your location/area">
                         </div>
                     </div>
                     
@@ -543,14 +542,14 @@
                         <!-- Third row of inputs (Email) -->
                         <div class="col-md-12 form-group">
                             <label for="email">Email</label>
-                            <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email">
+                            <input type="email" name="email" class="form-control"  placeholder="Enter your email">
                         </div>
                     </div>
 
                     <!-- Message Box at the bottom -->
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea class="form-control" name="message" id="message" rows="4" placeholder="Enter your message"></textarea>
+                        <textarea class="form-control" name="message"  rows="4" placeholder="Enter your message"></textarea>
                     </div>
 
                     <!-- Submit button -->
