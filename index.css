@@ -143,6 +143,28 @@
 
 
 
+/* blinkingtext */
+.blinking-text {
+    font-size: 2rem; /* Adjust font size as needed */
+    font-weight: bold; /* Make it bold */
+    color: red; /* Text color */
+    animation: blink 1s infinite; /* Apply the blink animation */
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0; /* Hidden */
+    }
+}
+/* blinkingtext */
+
+
+
+
+
 
 
 /* enroll box */
