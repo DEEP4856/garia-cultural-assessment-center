@@ -196,4 +196,33 @@
     }
 }
 
+
+.footer-links .map-container {
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.footer-links .map-container iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-links, .footer-contact {
+        margin-top: 30px;
+    }
+
+    .footer-links .map-container {
+        margin-top: 15px;
+    }
+}
 /* footer */
