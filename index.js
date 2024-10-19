@@ -34,5 +34,11 @@ document.getElementById('enrollmentForm').addEventListener('submit', function(ev
 
 
 
+// temporary
+
+function block() {
+    alert("ENROLLMENT WILL START FROM 1ST DECEMBER 2024")
+}
+
 
 
